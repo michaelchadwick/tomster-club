@@ -22,3 +22,5 @@
 #browserstack via ember-cli-browserstack
 browserstack-local.pid
 local.log
+/visual-test-output/tmp/**/*.png
+/visual-test-output/diff/**/*.png
