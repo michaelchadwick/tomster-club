@@ -44,6 +44,9 @@ module.exports = async function (defaults) {
     'ember-cli-qunit': {
       useLintTree: false,
     },
+    'ember-test-selectors': {
+      strip: true,
+    },
     autoImport: {
       // adding insertScriptsAt breaks things for this app -_-
       // insertScriptsAt: 'auto-import-scripts',
