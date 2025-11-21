@@ -230,6 +230,9 @@ importers:
       ember-template-lint:
         specifier: ^6.1.0
         version: 6.1.0
+      ember-test-selectors:
+        specifier: ^7.0.0
+        version: 7.1.0
       eslint:
         specifier: ^9.37.0
         version: 9.39.1
