@@ -8,6 +8,7 @@ import DetailsGallery from 'frontend/components/details-gallery';
 import FaIconStack from 'frontend/components/fa-icon-stack';
 import PasswordValidator from 'frontend/components/password-validator';
 import RandomText from 'frontend/components/random-text';
+import Stats from 'frontend/components/stats';
 <template>
   {{pageTitle (t "layout.headDebuggery")}}
   <h2>{{t "layout.headDebuggery"}}</h2>
@@ -20,6 +21,11 @@ import RandomText from 'frontend/components/random-text';
       <FaIconStack @icons={{@model.stackedIcon}} @title="Unpublished" />
     </li>
   </ul>
+
+  <div class="component-display">
+    <h3>{{t "components.stats.head"}}</h3>
+    <Stats />
+  </div>
 
   <div class="component-display">
     <h3>{{t "components.emberSimpleCharts.head"}}</h3>

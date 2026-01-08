@@ -30,6 +30,10 @@ components:
     validate: Validate
   randomText:
     head: RandomText (CMN)
+  stats:
+    head: Site Stats (CMN)
+    local: Local Stats
+    session: Session Stats
 general:
   actions: Actions
   add: Add

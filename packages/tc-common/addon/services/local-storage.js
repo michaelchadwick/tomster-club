@@ -27,12 +27,11 @@ export default class LocalStorageService extends Service {
         return settings;
       }
     } else {
-      // console.log(this.intl.t('errors.lsGetCreate'));
-
       return localStorage.setItem(
         ENV.APP.LOCAL_STORAGE_KEY,
         JSON.stringify({
           detailsGalleryExpanded: false,
+          localStats: 0,
         }),
       );
     }
