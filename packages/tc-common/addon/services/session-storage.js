@@ -15,7 +15,7 @@ export default class SessionStorageService extends Service {
           return settings[item];
         } else {
           console.error(
-            this.intl.t('errors.lsGetItemFail', {
+            this.intl.t('errors.ssGetItemFail', {
               keyName: ENV.APP.SESSION_STORAGE_KEY,
               itemName: item,
             }),
@@ -29,9 +29,7 @@ export default class SessionStorageService extends Service {
     } else {
       return sessionStorage.setItem(
         ENV.APP.SESSION_STORAGE_KEY,
-        JSON.stringify({
-          sessionStats: 0,
-        }),
+        JSON.stringify(ENV.APP.DEFAULTS.sessionStorage),
       );
     }
   }
@@ -39,22 +37,36 @@ export default class SessionStorageService extends Service {
   set(item, value) {
     const settings = JSON.parse(sessionStorage.getItem(ENV.APP.SESSION_STORAGE_KEY));
 
+    // if sessionStorage[key] exists, move on
     if (settings) {
+      // if sessionStorage[key][item] exists, move on
       if (settings[item] !== undefined) {
         settings[item] = value;
         sessionStorage.setItem(ENV.APP.SESSION_STORAGE_KEY, JSON.stringify(settings));
-      } else {
-        console.error(
-          this.intl.t('errors.lsSetItemFail', {
-            keyName: ENV.APP.SESSION_STORAGE_KEY,
-            itemName: item,
-            value: value,
-          }),
-        );
+      }
+      // otherwise, check if item has default value
+      else {
+        // if so, set item to default value
+        if (Object.hasOwn(ENV.APP.DEFAULTS.sessionStorage, item)) {
+          settings[item] = ENV.APP.DEFAULTS.sessionStorage[item];
+          sessionStorage.setItem(ENV.APP.SESSION_STORAGE_KEY, JSON.stringify(settings));
+        }
+        // otherwise, throw error
+        else {
+          console.error(
+            this.intl.t('errors.ssSetItemFail', {
+              keyName: ENV.APP.SESSION_STORAGE_KEY,
+              itemName: item,
+              value: value,
+            }),
+          );
+        }
 
         return null;
       }
-    } else {
+    }
+    // otherwise, create default key
+    else {
       const obj = {};
       obj[item] = value;
       return sessionStorage.setItem(ENV.APP.SESSION_STORAGE_KEY, JSON.stringify(obj));

@@ -97,6 +97,16 @@ module.exports = function (environment) {
           text: null,
         },
       ],
+      DEFAULTS: {
+        localStorage: {
+          detailsGalleryExpanded: false,
+          locale: 'en-us',
+          localStats: 0,
+        },
+        sessionStorage: {
+          sessionStats: 0,
+        },
+      },
       LOCAL_STORAGE_KEY: 'tomster-club',
       SESSION_STORAGE_KEY: 'tomster-club',
       GITHUB_API_URL: 'https://api.github.com',
