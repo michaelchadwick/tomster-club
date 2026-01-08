@@ -98,6 +98,7 @@ module.exports = function (environment) {
         },
       ],
       LOCAL_STORAGE_KEY: 'tomster-club',
+      SESSION_STORAGE_KEY: 'tomster-club',
       GITHUB_API_URL: 'https://api.github.com',
       GITHUB_SRC_NAME: 'tomster-club',
       GITHUB_SRC_URL: 'https://github.com/michaelchadwick/tomster-club',
