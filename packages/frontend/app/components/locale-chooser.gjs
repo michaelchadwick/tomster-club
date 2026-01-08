@@ -16,6 +16,7 @@ import FaIcon from 'frontend/components/fa-icon';
 export default class LocaleChooserComponent extends Component {
   @service intl;
   @tracked isOpen = false;
+  @service('local-storage') ls;
 
   get locale() {
     const locale = this.intl.get('primaryLocale');
@@ -36,6 +37,7 @@ export default class LocaleChooserComponent extends Component {
   changeLocale(id, event) {
     this.isOpen = false;
     this.intl.setLocale(id);
+    this.ls.set('locale', id);
     window.document.querySelector('html').setAttribute('lang', id);
     event.target.parentElement.parentElement.firstElementChild.focus();
   }

@@ -9,6 +9,7 @@ export default class AuthenticatedRoute extends Route {
   @service router;
   @service session;
   @service headData;
+  @service('local-storage') ls;
 
   @tracked appEnv = ENV.environment;
 
@@ -18,7 +19,7 @@ export default class AuthenticatedRoute extends Route {
 
   async beforeModel() {
     await this.session.setup();
-    this.intl.setLocale(['en-us']);
+    this.intl.setLocale(this.initialLocale());
     const locale = this.intl.primaryLocale;
     window.document.querySelector('html').setAttribute('lang', locale);
   }
@@ -73,5 +74,17 @@ export default class AuthenticatedRoute extends Route {
         this.currentUser.currentUserId,
       );
     }
+  }
+
+  // check if we have a saved, valid locale
+  initialLocale() {
+    const itemVal = this.ls.get('locale');
+
+    if (itemVal !== undefined) {
+      if (ENV.APP.SUPPORTED_LOCALES.includes(itemVal)) {
+        return itemVal;
+      }
+    }
+    return ENV.APP.DEFAULTS.localStorage['locale'];
   }
 }
