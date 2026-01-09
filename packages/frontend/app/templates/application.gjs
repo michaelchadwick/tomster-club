@@ -5,7 +5,6 @@ import Footer from 'frontend/components/layout/footer';
 import NavBar from 'frontend/components/layout/nav-bar';
 import Ribbon from 'frontend/components/layout/ribbon';
 import TomsterPopper from 'frontend/components/tomster-popper';
-import UserMenu from 'frontend/components/user-menu';
 
 <template>
   {{pageTitle (t "general.siteTitle") separator=" | " front=false}}
@@ -17,8 +16,6 @@ import UserMenu from 'frontend/components/user-menu';
     <header>
       <NavBar />
     </header>
-
-    <UserMenu />
 
     <main id="main">
       {{#if @controller.showErrorDisplay}}

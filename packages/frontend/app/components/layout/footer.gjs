@@ -6,6 +6,7 @@ import { LinkTo } from '@ember/routing';
 import AudioPlayer from 'frontend/components/audio-player';
 import FaIcon from 'frontend/components/fa-icon';
 import Aardvark from 'frontend/components/aardvark';
+import UserMenu from 'frontend/components/user-menu';
 
 export default class FooterComponent extends Component {
   @service intl;
@@ -91,6 +92,7 @@ export default class FooterComponent extends Component {
         {{@frontendVersionTag}}
         [{{t "general.antCount"}}:
         <Aardvark />]
+        <UserMenu />
       </div>
     </footer>
   </template>
