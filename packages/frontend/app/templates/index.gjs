@@ -1,4 +1,7 @@
+import t from 'ember-intl/helpers/t';
 <template>
+  <p>{{t "general.indexHead"}}</p>
+
   <div class="checklists">
     {{#each @model.checklists as |checklist|}}
       <h2>{{checklist.title}}</h2>

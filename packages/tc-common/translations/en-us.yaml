@@ -112,6 +112,7 @@ general:
       undo: Undo (⌘Z)
   inactive: inactive
   include: Include
+  indexHead: "Welcome to Tomster Club, where remembering and testing things in EmberJS is our mission."
   info: Info
   last: Last
   lastUpdate: Last Update

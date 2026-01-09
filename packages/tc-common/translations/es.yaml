@@ -112,6 +112,7 @@ general:
       undo: Deshacer (⌘Z)
   inactive: inactivo
   include: Incluir
+  indexHead: "Bienvenido a Tomster Club, donde recordar y probar cosas en EmberJS es nuestra misión."
   info: Info
   last: Último
   lastUpdate: Última actualización
