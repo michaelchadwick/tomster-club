@@ -123,6 +123,7 @@ general:
   location: Location
   login: Login
   message: Message
+  metaDescription: Remembering and testing stuff in EmberJS.
   minute: Minute
   minutes: Minutes
   monday: Monday

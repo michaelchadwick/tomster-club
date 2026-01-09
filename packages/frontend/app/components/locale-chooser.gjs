@@ -39,6 +39,9 @@ export default class LocaleChooserComponent extends Component {
     this.intl.setLocale(id);
     this.ls.set('locale', id);
     window.document.querySelector('html').setAttribute('lang', id);
+    window.document
+      .querySelector('meta[name="description"]')
+      .setAttribute('content', this.intl.t('general.metaDescription'));
     event.target.parentElement.parentElement.firstElementChild.focus();
   }
 
