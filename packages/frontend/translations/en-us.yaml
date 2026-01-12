@@ -266,6 +266,7 @@ errors:
   equalTo: "{description} must be equal to {is}"
   generic: "You tried to reach something that doesn't exist, or a server error prevented it from being accessed. Either way, please check the URL or try again later."
   invalid: "{description} is invalid"
+  localStorageSetItemFail: "Could not set localStorage item {itemName} from key {keyName} with {value}"
   notSupported: "{description} is not supported"
   present: "{description} must be blank"
   required: "{description} is required"

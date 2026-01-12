@@ -188,8 +188,6 @@ errors:
   empty: "{description} can not be empty"
   equalTo: "{description} must be equal to {is}"
   invalid: "{description} is invalid"
-  lsGetItemFail: "Could not get localStorage item {itemName} from key {keyName}"
-  lsSetItemFail: "Could not set localStorage item {itemName} from key {keyName} with {value}"
   noResultsFound: "No results found."
   notSupported: "{description} is not supported"
   present: "{description} must be blank"

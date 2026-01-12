@@ -266,6 +266,7 @@ errors:
   equalTo: "{description} debe ser igual a {is}"
   generic: "Intentaste acceder a algo que no existe o un error del servidor impidió el acceso. De cualquier modo, verifica la URL o vuelve a intentarlo más tarde."
   invalid: "{description} es inválido"
+  localStorageSetItemFail: "No se pudo establecer la elemento {itemName} de la localStorage clave {keyName} con {value}"
   notSupported: "{description} no es compatible"
   present: "{description} debe estar en blanco"
   required: "{description} se requiere"

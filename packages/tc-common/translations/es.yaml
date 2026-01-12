@@ -188,8 +188,6 @@ errors:
   empty: "{description} no puede estar vacío"
   equalTo: "{description} debe ser igual a {is}"
   invalid: "{description} es inválido"
-  lsGetCreate: "No se encontró localStorage para este sitio. Creando clave y configuración predeterminadas."
-  lsSetItemFail: "No se pudo establecer la elemento {itemName} de la localStorage clave {keyName} con {value}"
   noResultsFound: "Ningún resultado encontrado."
   notSupported: "{description} no es compatible"
   present: "{description} debe estar en blanco"
