@@ -1,4 +1,4 @@
-import { module, test, todo } from 'qunit';
+import { module, test, skip } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import getElement from 'tc-common/modifiers/get-element';
@@ -20,7 +20,7 @@ module('Integration | Modifier | get-element', function (hooks) {
     assert.strictEqual(this.rootElement, document.getElementById('root-element'));
   });
 
-  todo('it fails when no callback is given', async function (assert) {
+  skip('it fails when no callback is given', async function (assert) {
     assert.expect(1);
 
     this.set('invalidCallback', 'not-a-function');

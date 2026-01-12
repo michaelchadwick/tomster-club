@@ -1,4 +1,4 @@
-import { module, test, todo } from 'qunit';
+import { module, test, skip } from 'qunit';
 import { setupRenderingTest } from 'frontend/tests/helpers';
 import { render, triggerKeyEvent } from '@ember/test-helpers';
 import { component } from 'tc-common/page-objects/components/html-editor';
@@ -23,8 +23,8 @@ module('Integration | Component | html editor', function (hooks) {
     assert.ok(component.editor, 'editor area exists');
   });
 
-  // test->todo for a11y issues I can't fix yet
-  todo('it toggles popup open when link button is clicked', async function (assert) {
+  // test->skip for a11y issues I can't fix yet
+  skip('it toggles popup open when link button is clicked', async function (assert) {
     await render(<template><HtmlEditor /></template>);
 
     assert.notOk(component.popup.activated, 'popup is not visible');
@@ -37,8 +37,8 @@ module('Integration | Component | html editor', function (hooks) {
     assert.notOk(component.popup.activated, 'popup is not visible');
   });
 
-  // test->todo for a11y issues I can't fix yet
-  todo('it toggles popup closed when escape key is pressed', async function (assert) {
+  // test->skip for a11y issues I can't fix yet
+  skip('it toggles popup closed when escape key is pressed', async function (assert) {
     const editor = '.html-editor';
     const popup = '.ql-popup';
 
@@ -61,8 +61,8 @@ module('Integration | Component | html editor', function (hooks) {
     );
   });
 
-  // test->todo for a11y issues I can't fix yet
-  todo('it enters link from popup into editor via insert button', async function (assert) {
+  // test->skip for a11y issues I can't fix yet
+  skip('it enters link from popup into editor via insert button', async function (assert) {
     const link = { href: 'https://iliosproject.org', text: 'Ilios Project' };
 
     this.set('description', '');
@@ -95,8 +95,8 @@ module('Integration | Component | html editor', function (hooks) {
     );
   });
 
-  // test->todo for a11y issues I can't fix yet
-  todo('it enters link from popup into editor via Enter key', async function (assert) {
+  // test->skip for a11y issues I can't fix yet
+  skip('it enters link from popup into editor via Enter key', async function (assert) {
     const link = { href: 'https://iliosproject.org', text: 'Ilios Project' };
     const popup = '.ql-popup';
 
@@ -132,8 +132,8 @@ module('Integration | Component | html editor', function (hooks) {
     );
   });
 
-  // test->todo for a11y issues I can't fix yet
-  todo('it fails to add link if missing link text or URL', async function (assert) {
+  // test->skip for a11y issues I can't fix yet
+  skip('it fails to add link if missing link text or URL', async function (assert) {
     await render(<template><HtmlEditor /></template>);
 
     assert.notOk(component.popup.activated, 'popup is not visible');
@@ -149,7 +149,7 @@ module('Integration | Component | html editor', function (hooks) {
     assert.strictEqual(component.popup.errors[1].text, 'Link Text can not be blank');
   });
 
-  todo('it edits existing link and retains properties', async function (assert) {
+  skip('it edits existing link and retains properties', async function (assert) {
     const editor = '.html-editor';
     const tooltip = '.ql-tooltip';
     const link1 = { href: 'https://iliosproject.org', text: 'Ilios Project' };
@@ -204,8 +204,8 @@ module('Integration | Component | html editor', function (hooks) {
     );
   });
 
-  // test->todo for a11y issues I can't fix yet
-  todo('undo/redo', async function (assert) {
+  // test->skip for a11y issues I can't fix yet
+  skip('undo/redo', async function (assert) {
     const newText = 'Hello universe!';
     this.set('content', '');
     this.set('updateContent', (value) => {
