@@ -6,7 +6,7 @@ import set from 'ember-set-helper/helpers/set';
 import not from 'ember-truth-helpers/helpers/not';
 import formatTime from 'ember-intl/helpers/format-time';
 import FaIcon from 'frontend/components/fa-icon';
-import NotFound from 'frontend/components/not-found';
+import NotFound from 'tc-common/components/not-found';
 
 export default class ErrorDisplayComponent extends Component {
   @tracked isOffline = !navigator.onLine;

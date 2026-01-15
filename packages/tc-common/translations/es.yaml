@@ -135,6 +135,7 @@ general:
   no: No
   noneFound: "No se encontraron {items}."
   notes: Notas
+  notFound: 404 No Encontrado
   notFoundMessage: "¡Ay no! No se pudo encontrar el recurso. Favor de verificar la dirección de la página, y trata otra vez."
   overview: Descripción General
   owner: Dueño

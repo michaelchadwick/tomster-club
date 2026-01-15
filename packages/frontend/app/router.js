@@ -22,6 +22,8 @@ Router.map(function () {
 
   this.route('upload');
 
+  this.route('four-oh-four', { path: '*path' });
+
   this.route('login');
   this.route('logout');
 });

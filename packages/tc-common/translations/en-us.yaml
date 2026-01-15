@@ -135,6 +135,7 @@ general:
   no: No
   noneFound: "No {items} found."
   notes: Notes
+  notFound: 404 Not Found
   notFoundMessage: "Rats! I couldn't find that. Please check your page address, and try again."
   overview: Overview
   owner: Owner
