@@ -19,11 +19,7 @@ module.exports = async function (defaults) {
 
     hinting: isTestBuild,
     babel: {
-      plugins: [
-        require.resolve('ember-concurrency/async-arrow-task-transform'),
-        ...require('ember-cli-code-coverage').buildBabelPlugin({ embroider: true }),
-      ],
-      extensions: ['.js', '.ts', '.gjs'], // ← this makes it work
+      plugins: [require.resolve('ember-concurrency/async-arrow-task-transform')],
     },
     'ember-cli-image-transformer': {
       images: [
@@ -44,24 +40,12 @@ module.exports = async function (defaults) {
     'ember-cli-qunit': {
       useLintTree: false,
     },
-    'ember-test-selectors': {
-      strip: true,
-    },
     autoImport: {
-      // adding insertScriptsAt breaks things for this app -_-
-      // insertScriptsAt: 'auto-import-scripts',
+      insertScriptsAt: 'auto-import-scripts',
       watchDependencies: ['tc-common'],
     },
     sassOptions: {
-      extension: 'scss',
       includePaths: ['node_modules/ember-a11y-refocus/dist/styles'],
-    },
-    '@embroider/macros': {
-      setConfig: {
-        'ember-qunit': {
-          theme: 'ember',
-        },
-      },
     },
   };
 
