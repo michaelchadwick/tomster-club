@@ -5,6 +5,7 @@ import FaIcon from 'frontend/components/fa-icon';
   <p>{{t "sections.music.description" htmlSafe=true}}</p>
 
   <div class="loading-spinner">
-    <FaIcon @icon="spinner" @spin={{true}} />{{t "general.loading"}}
+    <FaIcon @icon="spinner" @spin={{true}} />
+    {{t "general.loading"}}
   </div>
 </template>
