@@ -100,7 +100,7 @@ module.exports = function (environment) {
       DEFAULTS: {
         localStorage: {
           detailsGalleryExpanded: false,
-          locale: 'en-US',
+          locale: 'en-us',
           localStats: 0,
         },
         sessionStorage: {
@@ -115,7 +115,7 @@ module.exports = function (environment) {
       GITHUB_USERNAME: 'michaelchadwick',
       MUSIC_API_ROOT: 'https://music.nebyoolae.com',
       NETLIFY_URL: 'https://tomster-club.netlify.app',
-      SUPPORTED_LOCALES: ['en-US', 'es'],
+      SUPPORTED_LOCALES: ['en-us', 'es'],
       isRunningWithServerArgs: process.argv.includes('--server') || process.argv.includes('-s'),
     },
   };
