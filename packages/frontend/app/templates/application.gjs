@@ -29,7 +29,7 @@ import TomsterPopper from 'frontend/components/tomster-popper';
   <Footer
     @audioPath={{@controller.audioPath}}
     @audioShouldLoop={{@controller.audioShouldLoop}}
-    @rsVersionTag={{@controller.rsVersionTag}}
+    @tcVersionTag={{@controller.tcVersionTag}}
     @apiVersionTag={{@controller.apiVersionTag}}
     @frontendVersionTag={{@controller.frontendVersionTag}}
   />

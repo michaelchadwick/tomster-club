@@ -30,7 +30,7 @@ export default class ApplicationController extends Controller {
   }
 
   @cached
-  get rsVersionTag() {
+  get tcVersionTag() {
     if (this.appVersion.isResolved) {
       return `[App: ${this.appVersion.value}]`;
     }

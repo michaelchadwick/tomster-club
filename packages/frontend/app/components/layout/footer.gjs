@@ -87,11 +87,11 @@ export default class FooterComponent extends Component {
         {{/each}}
       </div>
       <div class="versions">
-        {{@rsVersionTag}}
-        {{@apiVersionTag}}
-        {{@frontendVersionTag}}
-        [{{t "general.antCount"}}:
-        <Aardvark />]
+        <span class="tc-version">{{@tcVersionTag}}</span>
+        <span class="api-version">{{@apiVersionTag}}</span>
+        <span class="fe-version">{{@frontendVersionTag}}</span>
+
+        <Aardvark />
         <UserMenu />
       </div>
     </footer>
