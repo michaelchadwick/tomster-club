@@ -86,12 +86,14 @@ export default class FooterComponent extends Component {
           {{/if}}
         {{/each}}
       </div>
-      <div class="versions">
-        <span class="tc-version">{{@tcVersionTag}}</span>
-        <span class="api-version">{{@apiVersionTag}}</span>
-        <span class="fe-version">{{@frontendVersionTag}}</span>
+      <div class="sub-footer">
+        <div class="versions">
+          <span class="tc-version">{{@tcVersionTag}}</span>
+          <span class="api-version">{{@apiVersionTag}}</span>
+          <span class="fe-version">{{@frontendVersionTag}}</span>
 
-        <Aardvark />
+          <Aardvark />
+        </div>
         <UserMenu />
       </div>
     </footer>
