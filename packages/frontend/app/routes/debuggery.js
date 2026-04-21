@@ -1,5 +1,6 @@
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
+import { action } from '@ember/object';
 // import { typeOf } from '@ember/utils';
 import { hash } from 'rsvp';
 import ENV from 'frontend/config/environment';
@@ -40,6 +41,16 @@ export default class DebuggeryRoute extends Route {
       ghUser: this.store.findRecord('gh-user', ENV.APP.GITHUB_USERNAME),
       stackedIcon: ['circle-check', 'slash'],
     });
+  }
+
+  @action
+  loading(transition) {
+    let start = new Date();
+    transition.promise.finally(() => {
+      console.info(`Took ${new Date() - start}ms to load`);
+    });
+
+    return true;
   }
 
   async afterModel() {
