@@ -1,6 +1,8 @@
 components:
   audioPlayer:
     head: AudioPlayer
+    pause: Pausa
+    play: Reproducir
   box:
     defaultBlock1: "<p>Hola. Este es un componente Box. Este texto proviene del bloque que pasa al componente Box. No soporta HTML. <b>No soporta</b> <code>HTML</code>.</p>"
     defaultHtml: "<p>Hola. Este es un componente Box. Este texto proviene del bloque que pasa al componente Box. <b>No soporta</b> <code>HTML</code>.</p>"

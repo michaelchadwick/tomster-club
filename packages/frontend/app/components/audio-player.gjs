@@ -73,6 +73,7 @@ export default class AudioPlayerComponent extends Component {
           type="button"
           id="btn-audio-play"
           aria-label={{t "components.audioPlayer.play"}}
+          title={{t "components.audioPlayer.play"}}
           {{on "click" this.play}}
         >
           <FaIcon @icon="play" />
@@ -83,6 +84,7 @@ export default class AudioPlayerComponent extends Component {
           type="button"
           id="btn-audio-pause"
           aria-label={{t "components.audioPlayer.pause"}}
+          title={{t "components.audioPlayer.pause"}}
           {{on "click" this.pause}}
         >
           <FaIcon @icon="pause" />

@@ -1,6 +1,8 @@
 components:
   audioPlayer:
     head: AudioPlayer (CMN)
+    pause: Pause
+    play: Play
   box:
     defaultBlock1: "<p>Hey! This is a Box component. This text is coming from a block passed into the Box component. It <b>does not</b> support <code>HTML</code>.</p>"
     defaultHtml: "<p>Hello. This is a Box component. This text is coming from the block passed to the Box component. It does <b>not</b> support HTML.</p>"
