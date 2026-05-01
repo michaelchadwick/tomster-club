@@ -1,0 +1,16 @@
+import { module, test } from 'qunit';
+import { visit, currentURL } from '@ember/test-helpers';
+import { setupApplicationTest } from 'frontend/tests/helpers';
+import a11yAudit from 'ember-a11y-testing/test-support/audit';
+
+module('Acceptance | login', function (hooks) {
+  setupApplicationTest(hooks);
+
+  test('visiting /login', async function (assert) {
+    await visit('/login');
+
+    assert.strictEqual(currentURL(), '/login', 'transitioned to login route');
+    await a11yAudit();
+    assert.ok(true, 'no a11y errors found!');
+  });
+});
