@@ -21,6 +21,8 @@ components:
   debuggery:
     daveApi:
       head: DaveApiData
+  downloadDropdown:
+    head: Download Dropdown
   ghCommits:
     head: GithubCommits (FE)
   ghUser:

@@ -5,6 +5,7 @@ import BoxGallery from 'frontend/components/box-gallery';
 import Chart from 'frontend/components/chart';
 import Concurrency from 'frontend/components/concurrency';
 import DetailsGallery from 'frontend/components/details-gallery';
+import DownloadDropdown from 'frontend/components/download-dropdown';
 import FaIconStack from 'frontend/components/fa-icon-stack';
 import PasswordValidator from 'frontend/components/password-validator';
 import RandomText from 'frontend/components/random-text';
@@ -21,6 +22,11 @@ import Stats from 'frontend/components/stats';
       <FaIconStack @icons={{@model.stackedIcon}} @title="Unpublished" />
     </li>
   </ul>
+
+  <div class="component-display">
+    <h3>{{t "components.downloadDropdown.head"}}</h3>
+    <DownloadDropdown @actions={{@controller.downloadDropdownLinks}} />
+  </div>
 
   <div class="component-display">
     <h3>{{t "components.stats.head"}}</h3>

@@ -8,6 +8,21 @@ export default class DebuggeryController extends Controller {
 
   @tracked detailsGalleryExpanded = false;
 
+  get downloadDropdownLinks() {
+    return [
+      {
+        text: 'PDF file',
+        filename: 'test.pdf',
+        link: '/assets/data/test.pdf',
+      },
+      {
+        text: 'CSV file',
+        filename: 'test.csv',
+        link: '/assets/data/test.csv',
+      },
+    ];
+  }
+
   @action
   detailsGalleryToggle() {
     if (this.ls.get('detailsGalleryExpanded')) {
