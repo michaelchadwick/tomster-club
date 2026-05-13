@@ -1,24 +1,34 @@
-$slightWhite: hsl(0, 0%, 98%);
-$raisinBlack: hsl(345, 6%, 13%);
-$white: hsl(0, 100%, 100%);
-$black: hsl(0, 0%, 0%);
+:root {
+  --white: hsl(0, 0%, 98%);
+  --bright-white: hsl(0, 0%, 100%);
 
-$orange: hsl(30, 100%, 40%);
-$sepia: hsl(30, 100%, 20%);
+  --grey: hsl(0, 0%, 30%);
+  --light-grey: hsl(0, 0%, 50%);
+  --lighter-grey: hsl(0, 0%, 80%);
+  --lightest-grey: hsl(0, 0%, 90%);
+  --super-light-grey: hsl(0, 0%, 95%);
 
-$fernGreen: hsl(103, 23%, 36%);
+  --red: hsl(0, 100%, 30%);
+  --light-red: hsl(0, 100%, 40%);
+  --lightest-red: hsl(0, 100%, 97%);
 
-$gold: hsl(48, 93%, 44%);
+  --orange: hsl(30, 100%, 40%);
+  --dark-orange: hsl(30, 100%, 20%);
 
-$blueMunsell: hsl(195, 53%, 43%);
-$tealBlue: hsl(195, 52%, 36%);
-$lightBlue: hsl(195, 51%, 92%);
+  --yellow: hsl(45, 100%, 60%);
+  --dark-yellow: hsl(45, 100%, 45%);
+  --darker-yellow: hsl(45, 100%, 20%);
 
-$davysGrey: hsl(0, 0%, 32%);
-$culturedGrey: hsl(200, 15%, 92%);
+  --green: hsl(115, 100%, 20%);
+  --lightest-green: hsl(115, 100%, 92%);
+  --transparent-green: hsl(115, 50%, 50%, 20%);
 
-$crimson: hsl(346, 82%, 48%);
-$lavenderBlush: hsl(346, 80%, 96%);
-$rosewood: hsl(346, 80%, 20%);
+  --blue: hsl(195, 50%, 35%);
+  --light-blue: hsl(195, 50%, 45%);
+  --lighter-blue: hsl(195, 50%, 80%);
+  --lightest-blue: hsl(195, 50%, 92%);
 
-$pearl: hsl(50.4, 80.65%, 93.92%);
+  --black: hsl(345, 6%, 13%);
+  --slightly-transparent-black: hsl(from var(--black) h s l / 0.8);
+  --very-transparent-black: hsl(from var(--black) h s l / 0.2);
+}

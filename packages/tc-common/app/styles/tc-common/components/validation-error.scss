@@ -1,7 +1,6 @@
-@use "../colors" as c;
 @use "../mixins" as m;
 
 .validation-error-message {
-  color: c.$crimson;
+  color: var(--red);
   @include m.font-size("small");
 }
