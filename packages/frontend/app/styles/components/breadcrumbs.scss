@@ -1,0 +1,95 @@
+@use "sass:math";
+
+.breadcrumbs {
+  $border: 1px solid var(--red);
+  $height: 2rem;
+  $h2: math.div($height, 2);
+  $h4: math.div($height, 4);
+
+  display: flex;
+  margin: 0 0 0.8rem;
+  text-align: left;
+
+  /* All crumbs – links or plain text – share the same visual box */
+  .crumb {
+    background-color: var(--white);
+    border: $border;
+    border-left: 0;
+    color: var(--red);
+    cursor: pointer;
+    display: flex;
+    font-size: 0.8rem;
+    line-height: $height;
+    margin-bottom: 2px;
+    margin-right: 0;
+    padding: 0 $h4 0 $h2; // left padding for the first child, right for the last
+    position: relative;
+    text-decoration: none;
+
+    /* ----- arrow pseudo‑elements ----- */
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      border-left: $h4 solid transparent;
+      border-top: $h2 solid transparent;
+      border-bottom: $h2 solid transparent;
+      width: $h4;
+    }
+
+    &::before {
+      // outer arrow – background colour
+      left: 100%;
+      border-left-color: var(--red);
+      margin-left: 1px;
+      z-index: 1;
+    }
+    &::after {
+      // inner arrow – white
+      left: 100%;
+      border-left-color: var(--white);
+      z-index: 2;
+    }
+
+    /* ----- special cases ----- */
+    &:first-child {
+      border-left: $border;
+      border-bottom-left-radius: 3px;
+      border-top-left-radius: 3px;
+      padding-left: $h2;
+    }
+    &:last-child {
+      background-color: inherit;
+      border-color: var(--black);
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+      color: var(--black);
+      cursor: default;
+      font-weight: 700;
+      padding-right: $h2;
+
+      &::before,
+      &::after {
+        border: 0;
+      }
+    }
+  }
+
+  /* If the crumb is a real <a>, make it block so the whole box is
+     clickable – we already had this in your original code. */
+  a.crumb {
+    display: block;
+
+    &:hover,
+    &:focus {
+      background-color: var(--red);
+      color: var(--white);
+
+      &::after {
+        border-left-color: var(--red);
+      }
+    }
+  }
+}

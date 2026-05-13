@@ -1,4 +1,6 @@
 components:
+  breadcrumbs:
+    head: Breadcrumbs
   concurrency:
     cancelAll: Cancel All
     cancelMostRecent: Cancel Most Recent
