@@ -68,6 +68,17 @@ sections:
     <p>Comenzó como una aplicación de chat falsa, como <a href=https://guides.emberjs.com/v5.8.0/components/introducing-components/>eso</a>. Sin embargo, se ha convertido en una página de inicio más personal que incorpora lo que he aprendido sobre EmberJS hasta ahora. Utilizando mis propios intereses y aplicándolos a través de los conceptos de la documentación de EmberJS, he llegado a comprender mejor este marco.</p>
 
     <p>La página de inicio se actualizará a medida que avance cada concepto y lo aplico a este sitio.</p>"
+  index:
+    description: "
+    <ul>
+      <li>Sobre: <a href='/about'>Obtén más información sobre qué es este sitio</a></li>
+      <li>Mensajes: <a href='/messages'>La aplicación de chat falsa original de un tutorial de EmberJS</a></li>
+      <li>Musica: <a href='/music'>Hago música, así que eso está bien</a></li>
+      <li>Enlaces: <a href='/links'>Enlaces a otros temas relacionados</a></li>
+      <li>Contacto: <a href='/contact'>¡Contáctame mediante un formulario que no funciona!</a></li>
+      <li>Debuggery: <a href='/debuggery'>Diversos experimentos</a></li>
+    </ul>
+    "
   links:
     noLinksFound: No se encontraron enlaces.
   messages:

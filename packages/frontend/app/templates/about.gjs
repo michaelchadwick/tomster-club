@@ -10,6 +10,29 @@ import GhCommits from 'frontend/components/gh-commits/index';
   {{#if @controller.isLoading}}
     <Loading />
   {{else}}
-    <GhCommits @title="Last 5 Commits" @commits={{@model}} />
+    <div class="checklists">
+      {{#each @model.checklists as |checklist|}}
+        <h2>{{checklist.title}}</h2>
+
+        <details>
+          <summary>{{if checklist.summary checklist.summary "Details"}}</summary>
+          {{#each checklist.lists as |list|}}
+            <ul class="checklist">
+              <li>
+                <span class={{if list.checked "checked"}}>
+                  {{list.title}}
+                </span>
+                <ul class="{{if list.code 'code'}}">
+                  {{#each list.items as |item|}}
+                    <li>{{item}}</li>
+                  {{/each}}
+                </ul>
+              </li>
+            </ul>
+          {{/each}}
+        </details>
+      {{/each}}
+    </div>
+    <GhCommits @title="Last 5 Commits" @commits={{@model.commits}} />
   {{/if}}
 </template>
