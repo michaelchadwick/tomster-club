@@ -14,9 +14,10 @@ export default class AboutRoute extends Route {
     const response = await fetch(url);
 
     if (response.ok) {
+      const commits = await response.json();
       return hash({
         checklists: this.store.findAll('checklist'),
-        commits: await response.json(),
+        commits,
       });
     } else {
       return null;

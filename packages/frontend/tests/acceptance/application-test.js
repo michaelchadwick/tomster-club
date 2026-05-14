@@ -19,8 +19,6 @@ module('Acceptance | tomster club', function (hooks) {
     assert.dom('footer .versions').exists();
     assert.dom('h1').hasText('Tomster Club');
 
-    assert.dom('.checklists').exists();
-
     assert.strictEqual(document.title, 'Tomster Club', '<title> matches route name');
   });
 
@@ -35,6 +33,7 @@ module('Acceptance | tomster club', function (hooks) {
     assert.dom('h1').hasText('Tomster Club');
     assert.dom('h2').hasText('About the Site');
     assert.dom('p').hasText('Tomster Club is a web application I built to learn about EmberJS.');
+    assert.dom('.checklists').exists();
 
     assert.strictEqual(document.title, 'About | Tomster Club', '<title> matches route name');
 
