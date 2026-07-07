@@ -20,6 +20,7 @@
     "test:ember": "pnpm --filter frontend exec ember test",
     "test:percy": "pnpm --filter frontend exec percy exec -- ember test",
     "test:perf": "pnpm --filter frontend exec ember test --filter='performance'",
+    "test:sanity": "pnpm --filter frontend exec ember test --filter='sanity'",
     "update:deps": "rm pnpm-lock.yaml; pnpm install --fix-lockfile; pnpm dedupe",
     "ember-version": "pnpm --filter frontend --filter tc-common exec ember -v",
     "prepare": "husky"
