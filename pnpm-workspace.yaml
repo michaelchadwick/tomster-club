@@ -1,9 +1,12 @@
 packages:
   - packages/frontend
   - packages/tc-common
-onlyBuiltDependencies:
-  - "@parcel/watcher"
-  - "@percy/core"
-  - core-js
-  - fsevents
-  - sharp
+
+allowBuilds:
+  "@parcel/watcher": false
+  "@percy/core": false
+  aws-sdk: true
+  core-js: false
+  ember-cli-image-transformer: true
+  fsevents: true
+  sharp: true
