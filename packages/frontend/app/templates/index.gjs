@@ -1,5 +1,7 @@
 import t from 'ember-intl/helpers/t';
+import Index from 'frontend/components/index';
 <template>
-  {{t "general.indexHead"}}
-  {{t "sections.index.description" htmlSafe=true}}
+  <div id="index-head">{{t "general.indexHead"}}</div>
+
+  <Index />
 </template>

@@ -12,7 +12,7 @@ import GhCommits from 'frontend/components/gh-commits/index';
   {{else}}
     <div class="checklists">
       {{#each @model.checklists as |checklist|}}
-        <h2>{{checklist.title}}</h2>
+        <h3>{{checklist.title}}</h3>
 
         <details>
           <summary>{{if checklist.summary checklist.summary "Details"}}</summary>

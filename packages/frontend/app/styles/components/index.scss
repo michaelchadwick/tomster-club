@@ -1,0 +1,31 @@
+#index-grid {
+  margin: 5px 0;
+
+  @media (min-width: 768px) {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px 0;
+  }
+
+  div {
+    background-color: var(--lightest-red);
+    border: 1px solid var(--red);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px var(--grey);
+    margin: 5px 0;
+    padding: 10px;
+
+    @media (min-width: 768px) {
+      min-height: 70px;
+    }
+
+    &:hover {
+      background-color: var(--bright-white);
+    }
+
+    h2 {
+      margin: 0 0 5px;
+    }
+  }
+}

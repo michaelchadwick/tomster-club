@@ -67,14 +67,24 @@ sections:
 
     <p>It started as a fake chat application, like <a href=https://guides.emberjs.com/v5.8.0/components/introducing-components/>this</a>. However, it's grown into more of a personal homepage incorporating what I've learned about EmberJS so far. Using my own interests, and applying them through the concepts in the EmberJS documentation, I've grown to understand this framework better.</p>"
   index:
-    description: "<ul>
-      <li>About - <a href=/about>Learn more about what this site is</a></li>
-      <li>Messages - <a href=/messages>The original fake chat application from an EmberJS tutorial</a></li>
-      <li>Music - <a href=/music>I make music, so that's cool</a></li>
-      <li>Links - <a href=/links>Links to other related things</a></li>
-      <li>Contact - <a href=/contact>Contact me using a form that does not work!</a></li>
-      <li>Debuggery - <a href=/debuggery>Various experiments</a></li>
-    </ul>"
+    about:
+      title: About
+      description: Learn more about what this site is
+    messages:
+      title: Messages
+      description: The original EmberJS fake chat application tutorial
+    music:
+      title: Music
+      description: I make music, so that's cool
+    links:
+      title: Links
+      description: Links to other related things
+    contact:
+      title: Contact
+      description: Contact me using a form that does not work!
+    debuggery:
+      title: Debuggery
+      description: Various experiments
   links:
     noLinksFound: No links found.
   messages:
