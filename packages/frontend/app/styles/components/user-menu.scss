@@ -1,4 +1,9 @@
 .user-menu {
   display: flex;
   gap: 5px;
+  padding: 0 1em;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
 }
