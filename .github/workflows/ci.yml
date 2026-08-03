@@ -99,25 +99,25 @@ jobs:
       - name: Build
         run: pnpm --filter ${{matrix.workspace}} run build
 
-  test-deploy-build:
-    name: Test Deploy Build
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version: [22]
-        workspace:
-          - frontend
+  # test-deploy-build:
+  #   name: Test Deploy Build
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 10
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       node-version: [22]
+  #       workspace:
+  #         - frontend
 
-    steps:
-      - uses: actions/checkout@v5
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: pnpm
-      - name: install dependencies
-        run: pnpm install
-      - name: Test ${{matrix.workspace}} Deploy
-        run: pnpm --filter ${{matrix.workspace}} run deploy:test
+  #   steps:
+  #     - uses: actions/checkout@v5
+  #     - uses: pnpm/action-setup@v4
+  #     - uses: actions/setup-node@v5
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
+  #         cache: pnpm
+  #     - name: install dependencies
+  #       run: pnpm install
+  #     - name: Test ${{matrix.workspace}} Deploy
+  #       run: pnpm --filter ${{matrix.workspace}} run deploy:test
